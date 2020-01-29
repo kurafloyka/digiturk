@@ -1,0 +1,30 @@
+Created by mymac on 29.01.2020
+
+This is a concept file with following syntax for each concept.
+# Click Subscribe button
+* Click to element "subscribeButton"
+
+# Register to One Month(Monthly Pass with One Week Free Trial) package
+* Click to element "oneWeekButton"
+
+# Validate package price
+* Click to element "oneWeekSubscribeButton"
+
+# Fill Create Account form with a random email
+* "1" saniye bekle
+* Write random email to element "randomEmail"
+
+# Ignore email verification alert by clicking (x)
+* "1" saniye bekle
+
+# Make Payment with Credit Card
+* "1" saniye bekle
+
+# Expect for a total charge of 1.00 since this is a free trial package
+* "1" saniye bekle
+
+# Provide a test card data and confirm payment(Do not enter a real card data)
+* "1" saniye bekle
+
+# Expect for a error text and finish test with success
+* "1" saniye bekle

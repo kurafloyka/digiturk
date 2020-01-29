@@ -1,0 +1,22 @@
+[
+  {
+    "key": "subscribeButton",
+    "value": "//a[@name='Subscribe']",
+    "type": "xpath"
+  },
+  {
+    "key": "oneWeekButton",
+    "value": "//span[contains(text(),'ONE WEEK')]",
+    "type": "xpath"
+  },
+  {
+    "key": "oneWeekSubscribeButton",
+    "value": "(//a[contains(text(),'SUBSCRIBE')])[4]",
+    "type": "xpath"
+  },
+  {
+    "key": "randomEmail",
+    "value": "//input[@placeholder='Email or Mobile Number']",
+    "type": "xpath"
+  }
+]
