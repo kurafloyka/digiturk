@@ -11,8 +11,11 @@ MainScenarios
 Tags:MainScenarios
 
 * Click Subscribe button
+* "4" saniye bekle
 * Register to One Month(Monthly Pass with One Week Free Trial) package
+* "4" saniye bekle
 * Validate package price
+* "4" saniye bekle
 * Fill Create Account form with a random email
 * Ignore email verification alert by clicking (x)
 * Make Payment with Credit Card

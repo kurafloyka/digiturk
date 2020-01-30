@@ -5,7 +5,6 @@ import helper.ElementHelper;
 import helper.StoreHelper;
 import model.ElementInfo;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 
@@ -17,6 +16,9 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.interactions.*;
+
+
 public class BasePageUtil {
 
     WebDriver driver;
@@ -25,21 +27,19 @@ public class BasePageUtil {
     public BasePageUtil(WebDriver driver) {
 
         this.driver = driver;
-        fluentWait = setFluentWait(30);
+        fluentWait = setFluentWait(300);
     }
 
     public FluentWait<WebDriver> setFluentWait(int timeout) {
 
         fluentWait = new FluentWait<WebDriver>(driver);
         fluentWait.withTimeout(timeout, TimeUnit.SECONDS)
-                .pollingEvery(300,TimeUnit.MILLISECONDS)
+                .pollingEvery(30000, TimeUnit.MILLISECONDS)
                 .ignoring(NoSuchElementException.class);
         return fluentWait;
 
 
     }
-
-
 
 
     public WebElement findElement(String key) {
@@ -49,6 +49,7 @@ public class BasePageUtil {
         ((JavascriptExecutor) driver).executeScript(
                 "arguments[0].scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'})",
                 webElement);
+
         return webElement;
     }
 
@@ -58,6 +59,8 @@ public class BasePageUtil {
     }
 
     public void clickElement(WebElement element) {
+
+
         element.click();
     }
 
@@ -244,6 +247,7 @@ public class BasePageUtil {
         fluentWait
                 .until(ExpectedConditions.invisibilityOfElementLocated(infoParam));
     }
+
     public void waitForTheElement(String key) {
         By infoParam = getBy(key);
         fluentWait.until(ExpectedConditions.elementToBeClickable(infoParam));

@@ -11,9 +11,15 @@ This is a concept file with following syntax for each concept.
 * Click to element "oneWeekSubscribeButton"
 
 # Fill Create Account form with a random email
+* Write value "faruk" to element "firstName"
+* "1" saniye bekle
+* Write "value" to "akyol" of element "lastName"
 * "1" saniye bekle
 * Write random email to element "randomEmail"
-
+* "1" saniye bekle
+* Write value "Istanbul34" to element "password"
+* "1" saniye bekle
+* Click to element "createAccountButton"
 # Ignore email verification alert by clicking (x)
 * "1" saniye bekle
 

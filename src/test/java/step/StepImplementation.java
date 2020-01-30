@@ -4,18 +4,14 @@ package step;
 import base.BasePageUtil;
 import base.BaseTest;
 import com.thoughtworks.gauge.Step;
+import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.logging.Logger;
 
 
 public class StepImplementation extends BaseTest {
@@ -87,8 +83,13 @@ public class StepImplementation extends BaseTest {
         WebElement element = methods.findElement(key);
         methods.hoverElement(element);
         waitByMilliSeconds(500);
+
+
+        logger.info("element enable olana kadar tikla");
         methods.clickElement(element);
         logger.info(key + " elemente tıkladı");
+
+
     }
 
 
@@ -469,7 +470,7 @@ public class StepImplementation extends BaseTest {
     @Step({"Write random email to element <key>",
             "<key> elementine random email yaz"})
     public void writeRandomEmailToElement(String key) {
-        methods.sendKeys(key, methods.randomString(15)+ "@gmail.com");
+        methods.sendKeys(key, methods.randomString(15) + "@gmail.com");
     }
 
     @Step({"Write random value to element <key> starting with <text>",
@@ -580,9 +581,6 @@ public class StepImplementation extends BaseTest {
         System.out.println(xpath + " : elementin uzerine gelindi");
 
     }
-
-
-
 
 
     @Step("<key> li elemente olusan Listeyi upload et")

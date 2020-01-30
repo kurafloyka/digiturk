@@ -18,5 +18,25 @@
     "key": "randomEmail",
     "value": "//input[@placeholder='Email or Mobile Number']",
     "type": "xpath"
+  },
+  {
+    "key": "firstName",
+    "value": "//input[@placeholder='First Name']]",
+    "type": "xpath"
+  },
+  {
+    "key": "lastName",
+    "value": "//input[@placeholder='Last Name']]",
+    "type": "xpath"
+  },
+  {
+    "key": "password",
+    "value": "//input[@id='password']",
+    "type": "xpath"
+  },
+  {
+    "key": "createAccountButton",
+    "value": "//input[@value='CREATE ACCOUNT']",
+    "type": "xpath"
   }
 ]
