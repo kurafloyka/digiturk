@@ -27,7 +27,7 @@ public class BasePageUtil {
     public BasePageUtil(WebDriver driver) {
 
         this.driver = driver;
-        fluentWait = setFluentWait(300);
+        fluentWait = setFluentWait(3000);
     }
 
     public FluentWait<WebDriver> setFluentWait(int timeout) {
@@ -246,6 +246,8 @@ public class BasePageUtil {
 
         fluentWait
                 .until(ExpectedConditions.invisibilityOfElementLocated(infoParam));
+        fluentWait
+                .until(ExpectedConditions.elementToBeClickable(infoParam));
     }
 
     public void waitForTheElement(String key) {

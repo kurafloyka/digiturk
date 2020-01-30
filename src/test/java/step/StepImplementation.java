@@ -8,10 +8,13 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 
 public class StepImplementation extends BaseTest {
@@ -85,7 +88,6 @@ public class StepImplementation extends BaseTest {
         waitByMilliSeconds(500);
 
 
-        logger.info("element enable olana kadar tikla");
         methods.clickElement(element);
         logger.info(key + " elemente tıkladı");
 
@@ -641,7 +643,16 @@ public class StepImplementation extends BaseTest {
         waitByMilliSeconds(500);
     }
 
+    @Step("<xpath> test")
+    public void test(String value) {
 
+
+        WebElement element = driver.findElement(By.xpath(value));
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(value)));
+
+
+    }
 }
 
 

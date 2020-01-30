@@ -13,7 +13,7 @@ This is a concept file with following syntax for each concept.
 # Fill Create Account form with a random email
 * Write value "faruk" to element "firstName"
 * "1" saniye bekle
-* Write "value" to "akyol" of element "lastName"
+* Write value "faruk" to element "lastName"
 * "1" saniye bekle
 * Write random email to element "randomEmail"
 * "1" saniye bekle

@@ -22,3 +22,5 @@ Tags:MainScenarios
 * Expect for a total charge of 1.00 since this is a free trial package
 * Provide a test card data and confirm payment(Do not enter a real card data)
 * Expect for a error text and finish test with success
+
+

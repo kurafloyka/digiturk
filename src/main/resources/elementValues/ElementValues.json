@@ -21,12 +21,12 @@
   },
   {
     "key": "firstName",
-    "value": "//input[@placeholder='First Name']]",
+    "value": "//input[@placeholder='First Name']",
     "type": "xpath"
   },
   {
     "key": "lastName",
-    "value": "//input[@placeholder='Last Name']]",
+    "value": "//input[@placeholder='Last Name']",
     "type": "xpath"
   },
   {

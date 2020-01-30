@@ -36,27 +36,25 @@ public class BaseTest {
         String baseUrl = "https://connect-th.beinsports.com/en";
 
 
-        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+        String os = System.getProperty("os.name").toLowerCase();
+        if (os.contains("mac")) {
+            System.setProperty("webdriver.chrome.driver", "web_driver/chromedriver");
+        }
+        if (os.contains("win")) {
+            System.setProperty("webdriver.chrome.driver", "web_driver/chromedriver.exe");
+        }
 
-
-            String os = System.getProperty("os.name").toLowerCase();
-            if (os.contains("mac")) {
-                System.setProperty("webdriver.chrome.driver", "web_driver/chromedriver");
-            }
-            if (os.contains("win")) {
-                System.setProperty("webdriver.chrome.driver", "web_driver/chromedriver.exe");
-            }
-
-
-            driver = new ChromeDriver();
-
+        DesiredCapabilities cap = DesiredCapabilities.chrome();
+        cap.setCapability("applicationCacheEnabled", false);
+        driver = new ChromeDriver(cap);
 
 
         driver.get(baseUrl);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(3, TimeUnit.MINUTES);
-        driver.manage().timeouts().setScriptTimeout(4, TimeUnit.MINUTES);
+        //driver.manage().deleteAllCookies();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().setScriptTimeout(24, TimeUnit.SECONDS);
 
 
     }
