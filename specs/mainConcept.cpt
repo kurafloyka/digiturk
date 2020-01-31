@@ -21,16 +21,26 @@ This is a concept file with following syntax for each concept.
 * "1" saniye bekle
 * Click to element "createAccountButton"
 # Ignore email verification alert by clicking (x)
-* "1" saniye bekle
+* Click to element "exitButton"
 
 # Make Payment with Credit Card
-* "1" saniye bekle
+* Click to element "paymentMethodButton"
+* Click to element "creditDebitCard"
+* Click to element "confirmationArea"
+* Click to element "payNowButton"
 
 # Expect for a total charge of 1.00 since this is a free trial package
 * "1" saniye bekle
 
 # Provide a test card data and confirm payment(Do not enter a real card data)
-* "1" saniye bekle
+* Write value "FARUK AKYOL" to element "cardHolderName"
+* Write value "2222222222222222" to element "cardNumber"
+* Click to element "expiryDateMMy"
+* Click to element "expiryDateMonth"
+* Click to element "expiryDateYY"
+* Click to element "expiryDateYear"
+* Write value "222" to element "cardVerificationCode"
+* Click to element "comfirmPayment"
 
 # Expect for a error text and finish test with success
-* "1" saniye bekle
+* "The transaction has been denied" check the word on page

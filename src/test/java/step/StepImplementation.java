@@ -551,12 +551,12 @@ public class StepImplementation extends BaseTest {
     }
 
 
-    @Step("<kelimeBilgisi> sayfada kontrol et")
-    public void sayfadaKelimeyiKontrolEt(String kelimeBilgisi) {
+    @Step({"<word> sayfada kontrol et","<word> check the word on page"})
+    public void sayfadaKelimeyiKontrolEt(String word) {
         logger.info("Sayfa kaynagi kontrol ediliyor.");
 
         waitBySeconds(5);
-        Assert.assertEquals(true, driver.getPageSource().contains(kelimeBilgisi));
+        Assert.assertEquals(true, driver.getPageSource().contains(word));
     }
 
     @Step("Scroll ile sayfayı aşağı indir")

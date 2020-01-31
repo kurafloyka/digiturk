@@ -38,5 +38,78 @@
     "key": "createAccountButton",
     "value": "//input[@value='CREATE ACCOUNT']",
     "type": "xpath"
+  },
+  {
+    "key": "exitButton",
+    "value": "#close",
+    "type": "css"
+  },
+  ,
+  {
+    "key": "paymentMethodButton",
+    "value": "//span[@id='select2-drpPaymentMethod-container']",
+    "type": "xpath"
+  },
+  ,
+  {
+    "key": "creditDebitCard",
+    "value": "//li[contains(text(),'Credit/Debit Card')]",
+    "type": "css"
+  },
+  ,
+  {
+    "key": "confirmationArea",
+    "value": "//div[@class='custom-checkbox']//label",
+    "type": "xpath"
+  },
+  {
+    "key": "payNowButton",
+    "value": "//input[@name='pay-now']",
+    "type": "xpath"
+  },
+  {
+    "key": "cardHolderName",
+    "value": "#Ecom_Payment_Card_Name",
+    "type": "css"
+  },
+  {
+    "key": "cardNumber",
+    "value": "#Ecom_Payment_Card_Number",
+    "type": "xpath"
+  },
+  {
+    "key": "expiryDateMM",
+    "value": "#Ecom_Payment_Card_ExpDate_Month",
+    "type": "css"
+  },
+  {
+    "key": "expiryDateYY",
+    "value": "#Ecom_Payment_Card_ExpDate_Year",
+    "type": "css"
+  },
+  {
+    "key": "expiryDateMonth",
+    "value": "//option[contains(text(),'01')]",
+    "type": "xpath"
+  },
+  {
+    "key": "expiryDateYear",
+    "value": "//option[contains(text(),'2026')]",
+    "type": "xpath"
+  },
+  {
+    "key": "cardVerificationCode",
+    "value": "#Ecom_Payment_Card_Verification",
+    "type": "css"
+  },
+  {
+    "key": "comfirmPayment",
+    "value": "#submit3",
+    "type": "css"
+  },
+  {
+    "key": "accessDeniedMessage",
+    "value": " //h3[contains(text(),'The transaction has been denied')]",
+    "type": "xpath"
   }
 ]
